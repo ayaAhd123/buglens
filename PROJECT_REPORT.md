@@ -43,10 +43,9 @@ What exists today:
 
 What is not finished:
 
-- Git has no commits on `master`. The work is still an untracked working tree.
 - BL-002 is `review_ready`, not closed.
 - The historical HTTP 502 from the analysis provider does not have a retained upstream cause.
-- Screenshots have not been added under `docs/screenshots/`.
+- Screenshots are not included in the repository.
 - The application is a local developer tool. It has no accounts, persistence, or deployment.
 
 ## 2. Why I chose to experiment with Concord MCP
@@ -217,7 +216,7 @@ All of the following comes from `.concord/WORK_STATE.json`, `.concord/events.jso
 
 - Close or review BL-002. It is not `complete`.
 - Confirm whether the 502 that prompted the diagnostics work has a known upstream status. The server README states that failure logs do not establish that historical 502’s cause.
-- Capture screenshots and make the first Git commit when I am ready to publish.
+- Capture screenshots when I am ready to add them.
 - Keep `server/.env.example` aligned with local use. It still lists only port 5173. During local testing I added port 5174 to the running allowlist and restarted the backend; that live file was not independently checked for this report.
 
 ## 8. Implemented features
@@ -345,19 +344,7 @@ Automated tests, the agent-observed session, and these user-confirmed checks are
 
 ## 12. Results and screenshots
 
-The product result I can describe without screenshots is a local dashboard and API that implement the contract in section 5, with 21 passing server tests and one observed live analysis. Screenshots are not in the repository yet.
-
-I am not embedding image links, because the files do not exist and a broken GitHub image would look like a result I did not capture. `docs/screenshots/README.md` lists the captures to add:
-
-| Intended file | What it should show |
-| --- | --- |
-| `docs/screenshots/01-editor-empty.png` | Editor before analysis, including the sample label. |
-| `docs/screenshots/02-findings-reviewer.png` | Findings and reviewer after a real response. |
-| `docs/screenshots/03-corrected-and-diff.png` | Corrected code, Copy code, and the diff. |
-| `docs/screenshots/04-mobile-nav.png` | Narrow layout. |
-| `docs/screenshots/05-unavailable-fix.png` | Only if an empty `fixedCode` is produced safely. |
-
-Before publication I need to take those images from a session that does not show secrets, then replace this table with real Markdown images.
+The product result I can describe is a local dashboard and API that implement the contract in section 5, with 21 passing server tests and one observed live analysis. Screenshots are not included in the repository.
 
 ## 13. Lessons learned
 
@@ -380,13 +367,13 @@ These are next steps, not implemented work.
 - Persisted analyses and a clearer history of the reference id next to a failure.
 - `strictPort` on Vite, and an example CORS list that matches every origin I actually use.
 - Authentication and rate limits before any non-local deployment.
-- A committed screenshot set and a root README written for this project. `client/README.md` is still the framework template.
+- A screenshot set. `client/README.md` is still the framework template.
 
 ## 15. Conclusion
 
 BugLens AI is a local full-stack workspace: a TypeScript dashboard, an Express analysis API, and two Gemini roles behind a validated JSON contract. I used it to practice the kind of work an entry-level full-stack role requires: an API boundary, secret handling, UI states, and a failure path that does not leak upstream details.
 
-I also used it to evaluate Concord MCP. The record shows Cursor and Codex on separate trees, an explicit assignment when the corrected-source work crossed that boundary, and a later diagnosis that was logged without a fake code change. In my own browser I submitted JavaScript with an off-by-one error and hardcoded credentials, read three Detective findings, checked the diff, and copied the corrected source. The open items are just as important: BL-002 is not closed, the earlier 502 has no retained upstream cause, `server/.env.example` still omits port 5174 even though I added that origin locally and restarted, Git history does not exist yet, and screenshots still need to be captured.
+I also used it to evaluate Concord MCP. The record shows Cursor and Codex on separate trees, an explicit assignment when the corrected-source work crossed that boundary, and a later diagnosis that was logged without a fake code change. In my own browser I submitted JavaScript with an off-by-one error and hardcoded credentials, read three Detective findings, checked the diff, and copied the corrected source. The open items are just as important: BL-002 is not closed, the earlier 502 has no retained upstream cause, `server/.env.example` still omits port 5174 even though I added that origin locally and restarted, screenshots are still not included.
 
 ## 16. How to run the project
 
