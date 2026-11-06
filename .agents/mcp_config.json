@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "concord": {
+      "command": "concord-mcp",
+      "env": {
+        "CONCORD_REPO_ROOT": "C:\\Users\\ayaao\\buglens-ai",
+        "CONCORD_AGENT_KIND": "antigravity"
+      }
+    }
+  }
+}

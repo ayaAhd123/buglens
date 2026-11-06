@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "concord": {
+      "command": "concord-mcp",
+      "env": {
+        "CONCORD_REPO_ROOT": "C:\\Users\\ayaao\\buglens-ai"
+      }
+    }
+  },
+  "tools": {
+    "shell": {
+      "backgroundCompletionBehavior": "inject"
+    }
+  },
+  "experimental": {
+    "modelSteering": true
+  }
+}
